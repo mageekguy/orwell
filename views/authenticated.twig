@@ -1,0 +1,21 @@
+{% extends "anonymous.twig" %}
+{% block navigation %}
+<ul class="nav">
+	<li class="divider-vertical"></li>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li><a href="{{ path('users') }}">Users</a></li>
+		</ul>
+	</li>
+</ul>
+<ul class="nav pull-right">
+	<li class="divider-vertical"></li>
+	<li class-"dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> {{ app.security.token.username }} <b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li><a href="{{ path('logout') }}">Logout</a></li>
+		</ul>
+	</li>
+</ul>
+{% endblock %}
